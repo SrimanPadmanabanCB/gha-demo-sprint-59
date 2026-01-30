@@ -11,7 +11,7 @@ on:
 jobs:
   validate:
     runs-on: ubuntu-latest
-    if: ${{ !github.event.pull_request.draft && github.event.pull_request.user.login != 'app/dependabot' }}
+    if: ${{ !github.event.pull_request.draft && github.event.pull_request.user.login != 'SrimanPadmanabanCB' }}
     steps:
       - name: Print the pull request author
         run: echo "The pull request author is ${{ github.event.pull_request.user.login }} "
