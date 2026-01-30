@@ -10,8 +10,7 @@ on:
       - ready_for_review
 jobs:
   validate:
-    runs-on:
-      group: large-runners
+    runs-on: ubuntu-latest
     if: ${{ !github.event.pull_request.draft && github.event.pull_request.user.login != 'app/dependabot' }}
     steps:
       - name: Print the pull request author
